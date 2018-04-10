@@ -1,0 +1,160 @@
+@charset "UTF-8";
+@import '_base+common';
+
+
+
+
+html {
+}
+body {	
+	background: #EAEAEA;
+}
+
+a {
+	color: $link-text;
+}
+/* ==========================================================================
+   HEADER
+   ========================================================================== */
+.header-site {
+	background: #fff;
+	@include shadow();
+	.container {position: relative;}
+  .google-links {
+    @media (min-width: $screen-lg-min) {
+      position: absolute;
+      top: 10px;
+      left: 230px;
+    }
+  }
+}
+.logo-main {
+	display: block;
+	font-weight: 500;
+	text-transform: uppercase;
+	font-size: 22px;
+	svg {
+		color: #FBD70D;
+	}
+}
+
+/* ==========================================================================
+   NAVIGATION
+   ========================================================================== */
+.nav-menu-header-1 {	
+	.menu-item:last-child {margin-right: 0;}	
+	@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+		.menu-item:first-child {display: none;}
+	}
+	@media (min-width: $screen-md-min) {
+		text-align: right;
+		border-bottom: 1px solid #e3e3e3;
+		@iclude clearfix();
+		.menu-item:first-child {float: left;}
+	}
+}
+
+.menu-header-wrap {
+	@media (min-width: $screen-md-min) {
+		text-align: right;
+	}
+}
+.nav-menu-header-2 { 	
+	display: inline-block;
+	margin-top: 5px;
+	a {font-weight: 500;}
+}
+/* ==========================================================================
+   CONTENT
+   ========================================================================== */
+.main-content {	
+	background: #fff;
+	@include shadow();		
+	margin-top: 88px;
+
+	.container {
+		position: relative;
+		padding-top: 28px;
+		padding-bottom: 48px;
+	}
+}
+/* ==========================================================================
+   - ARTICLE
+   ========================================================================== */
+
+
+/* ==========================================================================
+   SIDEBAR
+   ========================================================================== */
+
+/* all widgets */
+.widget {
+/* 	padding: 15px;
+margin-top: 30px;
+display: block;
+background: #fff;
+box-shadow: 0 5px 10px 0 rgba(215, 207, 196, 0.5);
+border-radius: 2px;
+&:first-child {margin-top: 0;} */
+}
+.widget-header {
+  	font-size: 17px;
+  	font-weight: 700;
+  	text-transform: uppercase;
+	padding: 13px 0 10px;
+	text-align: center;
+	margin: -15px -15px 15px -15px;
+	border-radius: 3px 3px 0 0;
+	color: #fff;
+}
+
+
+
+/* CATEGORIES */
+.site-sidebar .widget_categories {
+	padding: 0;
+	.widget-header {margin: 0 0 15px 0;}
+}
+.widget_categories {
+	ul {
+		@include resetUl();
+		.cat-item {
+			border-bottom: 1px solid #e5e5e5;
+			&:first-child {border-top: 1px solid #e5e5e5;}
+			> a {
+				display: block;
+				position: relative;
+				text-decoration: none;
+				font-weight: 700;
+				font-size: 17px;
+				padding: 10px 0 10px 13%;
+				overflow: hidden;
+				border-right: 2px solid;
+				background: #fff;
+				&:before {
+					content: "";
+					position: absolute;
+					left: -16px;
+					top: 0;
+					width: 16px; height: 100%;
+					transition: all .15s;
+					background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='16px' height='44px'%3E%3Cpath fill-rule='evenodd' fill='rgb%2852, 133, 51%29' d='M12.000,43.999 L10.000,43.999 L10.000,44.000 L-0.000,44.000 L-0.000,-0.000 L9.000,-0.000 L9.000,-0.000 L12.000,-0.000 C12.000,-0.000 12.714,21.999 16.000,21.999 C12.714,21.999 12.000,43.999 12.000,43.999 Z'/%3E%3C/svg%3E") no-repeat;
+					z-index: 20;
+				}
+				&:hover {
+					border-right-color: #fff;
+					&:before {left: 0}
+				}
+			}
+		}
+	}
+}
+
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+
+
+//@import 'css/plugins';
+//@import 'css/other';

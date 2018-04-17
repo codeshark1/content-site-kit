@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import '_base+common';
+@import '_plugins';
 
 
 
@@ -20,13 +21,14 @@ a {
 	background: #fff;
 	@include shadow();
 	.container {position: relative;}
-  .google-links {
-    @media (min-width: $screen-lg-min) {
-      position: absolute;
-      top: 10px;
-      left: 230px;
-    }
-  }
+	@media (min-width: $screen-lg-min) {
+		padding-top: 10px;
+	  	.google-links {
+	      position: absolute;
+	      top: -6px;
+	      left: 270px;
+	    }
+  	}
 }
 .logo-main {
 	display: block;
@@ -74,9 +76,111 @@ a {
 
 	.container {
 		position: relative;
-		padding-top: 28px;
-		padding-bottom: 48px;
+		padding-top: 14px;
+		padding-bottom: 24px;
+		@media (min-width: $screen-sm-min) {
+			padding-top: 28px;
+			padding-bottom: 48px;			
+		}
 	}
+}
+
+.b-compils-promo {
+	display: flex;
+	justify-content:  space-between;
+	flex-wrap: wrap;
+}
+.b-card-promo {
+	display: flex;
+	border: 1px solid rgba(#000, .07);
+	height: 96px;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	width: 48%;
+	margin-bottom: 2rem;
+	font-size: 1.2rem;
+	font-weight: 300;
+	@media (min-width: $screen-sm-min) {width: 30%;}
+
+}
+/* ==========================================================================
+   FILTER
+   ========================================================================== */
+
+.b-filter-main {
+	>div {margin-bottom: 1rem;}
+}
+
+.b-filter-extra {
+	background: rgba(#000, .05);
+	border: 1px solid rgba(#000, .1);
+	padding: 8px;
+	margin-bottom: 1.5rem;
+
+	@media (min-width: $screen-md-min) {
+		padding: 14px 14px 0;
+		@include clearfix();		
+	}
+	.lbl--radio {
+		margin: 0 1rem 1rem 0;
+		display: inline-block;
+		input {margin-right: 8px; vertical-align: text-top;}
+	}
+
+	/* left col */
+	.b-col-1 {
+		@media (min-width: $screen-md-min) {
+			float: left; width: 65%;
+			&_i {@include clearfix();}
+		}
+		@media (min-width: $screen-lg-min) {
+			width: 68%;
+			&-1 {
+				width: 47%;
+				float: left;
+				margin-right: 3%;
+				&:last-child {margin-right: 0;}
+			}
+		}
+		.b-col-1-1 {
+			margin-bottom: 1.5rem;
+		}
+	}
+
+
+	/* right col (selects) */
+	.b-col-2 {
+		.b-col-2-1 {margin-bottom: 1rem;}
+		@media (min-width: $screen-md-min) {
+			float: right; width: 32%;
+		}
+		@media (min-width: $screen-lg-min) {
+			float: right; width: 30%;
+			.b-col-2-1 {position: relative; padding-left: 130px;}
+			.lbl--side {
+				width: 125px;
+				position: absolute;
+				left: 0;
+			}
+		}
+	}
+	
+
+}
+
+.price-range {
+	&_i {
+		display: flex;
+		justify-content: space-between;
+	}
+	&--col {}
+
+	.input-price {width: 80px; margin: 0 2px}
+}
+.b-slider-range {
+	margin-top: 1.5rem;
+	padding: 0 16px;
 }
 /* ==========================================================================
    - ARTICLE
@@ -87,26 +191,6 @@ a {
    SIDEBAR
    ========================================================================== */
 
-/* all widgets */
-.widget {
-/* 	padding: 15px;
-margin-top: 30px;
-display: block;
-background: #fff;
-box-shadow: 0 5px 10px 0 rgba(215, 207, 196, 0.5);
-border-radius: 2px;
-&:first-child {margin-top: 0;} */
-}
-.widget-header {
-  	font-size: 17px;
-  	font-weight: 700;
-  	text-transform: uppercase;
-	padding: 13px 0 10px;
-	text-align: center;
-	margin: -15px -15px 15px -15px;
-	border-radius: 3px 3px 0 0;
-	color: #fff;
-}
 
 
 

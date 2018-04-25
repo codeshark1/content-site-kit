@@ -255,7 +255,7 @@ fieldset {
       padding: 10px 16px 12px; }
   @media (max-width: 767px) {
     .tab-bar .nav-menu {
-      width: 726px; } }
+      width: 800px; } }
 
 .pagination, .pagination-mob {
   display: -webkit-box;
@@ -1303,7 +1303,7 @@ a {
       position: relative; }
       .col-ad .ad-wrp {
         position: fixed;
-        top: 50%;
+        bottom: 0;
         max-width: 100%;
         width: inherit;
         z-index: 1; }

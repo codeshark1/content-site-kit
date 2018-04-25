@@ -15,7 +15,7 @@ body {
 a {
 	color: $link-text;
 }
-.container {max-width: 1280px;}
+.container {max-width: 1390px;}
 /* ==========================================================================
    HEADER
    ========================================================================== */
@@ -90,11 +90,13 @@ a {
 		}
 		.col-content {padding: 0 30px 0 0;}
 	}
+	@media (min-width: $screen-lg-min) {
+		.col-content {padding: 0 30px;}	
+	}
 }
 .col-ad {
-	text-align: center;
+	text-align: center;	
 	@media (max-width: $screen-lg) {
-	background: rgba(#6B6B6B,.9);
 		position: fixed;
 		left: 0;
 		bottom: 0;
@@ -126,8 +128,7 @@ a {
 	    //flex-grow: 0;
 	    //flex-shrink: 0;
 	    width: 200px;
-	    position: absolute;
-	    left: -200px;
+	    position: relative;	    	    
 	    .ad-wrp {
 	    	position: fixed; 
 	    	bottom: 0; 
@@ -149,7 +150,7 @@ a {
 	.container {
 		position: relative;
 		padding-top: 28px;
-		padding-bottom: 48px;			
+		//padding-bottom: 48px;			
 	}
 }
 .home .main-content {margin-top: 16px;}

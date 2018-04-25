@@ -140,6 +140,12 @@ a {
 	}
 }
 
+.col-ad-2 {
+	//background: #FFBFBF;
+	@media (max-width: 1400px) {
+		display: none !important;
+	}
+}
 
 
 .main-content {	

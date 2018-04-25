@@ -73,21 +73,30 @@ a {
    ========================================================================== */
 .row-new {
 	@media (min-width: $screen-sm-min) {
-		display: flex;
-		margin: 0 -15px;
+		//display: flex;
+		display: table;
+		//margin: 0 -15px;
+		table-layout: fixed;
 
 		.col-sidebar {
-		    flex-grow: 0;
-		    flex-shrink: 0;
+		    //flex-grow: 0;
+		    //flex-shrink: 0;
 		}
 		.col-sidebar {width: 300px;}		
 		.col-content, .col-sidebar {
-			padding: 0 15px;
+			display: table-cell;
+			vertical-align: top;
+			//padding: 0 15px;
 		}
+		.col-content {padding: 0 30px 0 0;}
+	}
+	@media (min-width: $screen-lg-min) {
+		.col-content {padding: 0 30px;}	
 	}
 }
 .col-ad {
 	text-align: center;
+	background: rgba(#136CF2,.9);
 	@media (max-width: $screen-lg) {
 		//display: none;
 		position: fixed;
@@ -116,11 +125,19 @@ a {
 			50% 50% no-repeat;
 			border:none;color: #fff;font-size: 24px;}
 	}
-	@media (min-width: $screen-lg-min) {
-		
-	    flex-grow: 0;
-	    flex-shrink: 0;
-	    width: 230px;padding: 0 15px;
+	@media (min-width: $screen-lg-min) {				
+		display: table-cell;
+	    //flex-grow: 0;
+	    //flex-shrink: 0;
+	    width: 200px;
+	    position: relative;	    	    
+	    .ad-wrp {
+	    	position: fixed; 
+	    	bottom: 0; 
+	    	max-width: 100%;
+	    	width: inherit;
+	    	z-index: 1;
+	    }	    
 		.close {display: none;}
 	}
 }

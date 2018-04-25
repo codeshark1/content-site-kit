@@ -1195,7 +1195,7 @@ a {
   color: #616161; }
 
 .container {
-  max-width: 1390px; }
+  max-width: 1280px; }
 
 /* ==========================================================================
    HEADER
@@ -1262,15 +1262,12 @@ a {
       vertical-align: top; }
     .row-new .col-content {
       padding: 0 30px 0 0; } }
-@media (min-width: 1200px) {
-  .row-new .col-content {
-    padding: 0 30px; } }
 
 .col-ad {
-  text-align: center;
-  background: rgba(107, 107, 107, 0.9); }
+  text-align: center; }
   @media (max-width: 1200px) {
     .col-ad {
+      background: rgba(107, 107, 107, 0.9);
       position: fixed;
       left: 0;
       bottom: 0;
@@ -1300,7 +1297,8 @@ a {
     .col-ad {
       display: table-cell;
       width: 200px;
-      position: relative; }
+      position: absolute;
+      left: -200px; }
       .col-ad .ad-wrp {
         position: fixed;
         bottom: 0;

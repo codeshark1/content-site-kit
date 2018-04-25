@@ -15,7 +15,7 @@ body {
 a {
 	color: $link-text;
 }
-.container {max-width: 1390px;}
+.container {max-width: 1280px;}
 /* ==========================================================================
    HEADER
    ========================================================================== */
@@ -90,14 +90,11 @@ a {
 		}
 		.col-content {padding: 0 30px 0 0;}
 	}
-	@media (min-width: $screen-lg-min) {
-		.col-content {padding: 0 30px;}	
-	}
 }
 .col-ad {
 	text-align: center;
-	background: rgba(#6B6B6B,.9);
 	@media (max-width: $screen-lg) {
+	background: rgba(#6B6B6B,.9);
 		position: fixed;
 		left: 0;
 		bottom: 0;
@@ -129,7 +126,8 @@ a {
 	    //flex-grow: 0;
 	    //flex-shrink: 0;
 	    width: 200px;
-	    position: relative;	    	    
+	    position: absolute;
+	    left: -200px;
 	    .ad-wrp {
 	    	position: fixed; 
 	    	bottom: 0; 

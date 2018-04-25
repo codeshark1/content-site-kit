@@ -1268,7 +1268,7 @@ a {
 
 .col-ad {
   text-align: center;
-  background: rgba(19, 108, 242, 0.9); }
+  background: rgba(107, 107, 107, 0.9); }
   @media (max-width: 1200px) {
     .col-ad {
       position: fixed;

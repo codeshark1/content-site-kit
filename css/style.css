@@ -299,10 +299,10 @@ fieldset {
 .menu-categs a {
   text-transform: capitalize;
   font-size: 15px; }
-.menu-categs > .menu-item:nth-child(odd) {
-  background: rgba(0, 0, 0, 0.04); }
+.menu-categs > .menu-item:nth-child(even) {
+  background: rgba(0, 0, 0, 0.06); }
 .menu-categs > .menu-item:nth-child(even) > .nav-menu > .menu-item:nth-child(odd) {
-  background: rgba(0, 0, 0, 0.04); }
+  background: rgba(0, 0, 0, 0.06); }
 .menu-categs > .menu-item > .nav-menu > .menu-item > a {
   padding-left: 40px; }
 .menu-categs > .menu-item > .nav-menu > .menu-item .menu-item a {

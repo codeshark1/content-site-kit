@@ -278,12 +278,12 @@ fieldset {
 .menu-categs {
   a {text-transform: capitalize; font-size: 15px;}
   >.menu-item {
-    &:nth-child(odd) {
-      background: rgba(#000, .04);
+    &:nth-child(even) {
+      background: rgba(#000, .06);      
     }
     &:nth-child(even) {
       >.nav-menu>.menu-item:nth-child(odd) {
-        background: rgba(#000, .04);
+        background: rgba(#000, .06);
       }
     }
     >.nav-menu {

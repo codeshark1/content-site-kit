@@ -142,6 +142,7 @@ jQuery(document).ready(function($){
             $('.tab-bar').css('left', bannerWidth - spaceWidth.left + 15);
         } else {
             $('.col-content').css('padding-left', 0);
+            $('.tab-bar').css('left', 15);
         }
     }
     

@@ -230,6 +230,9 @@ fieldset {
       font-weight: 500;
       padding: 10px 16px 12px;
     }
+    @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+      a {padding: 10px 10px 12px}
+    }
   }
 
   .nav-menu {    

@@ -253,6 +253,9 @@ fieldset {
     .tab-bar .cus-tab a {
       font-weight: 500;
       padding: 10px 16px 12px; }
+    @media (min-width: 992px) and (max-width: 1199px) {
+      .tab-bar .cus-tab a {
+        padding: 10px 10px 12px; } }
   @media (max-width: 767px) {
     .tab-bar .nav-menu {
       width: 800px; } }

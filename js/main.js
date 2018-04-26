@@ -129,15 +129,30 @@ jQuery(document).ready(function($){
             slidesToScroll: 1
           }
         }
-        // You can unslick at a given breakpoint now by adding:
-        // settings: "unslick"
-        // instead of a settings object
       ]
     });
 
 
+/*
+ 1. get current space width 
+ 2. get current banner width
+ 3. set padding of content: (= banner - space)
+*/
+    function setPadding() {
+        if ( $(window).width() > 1200) {
+            var spaceWidth = $('.container').offset();
+            var bannerWidth = $('.col-ad').width();
+            $('.col-content').css('padding-left', (bannerWidth - spaceWidth.left));
+        } else {
+            $('.col-content').css('padding-left', 0);
+        }
+    }
+    
+    setPadding();
 
-
+    $(window).resize(function(){
+        setPadding();
+    });
 
 
 

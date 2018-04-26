@@ -1256,7 +1256,7 @@ a {
     display: table;
     table-layout: fixed; }
     .row-new .col-sidebar {
-      width: 300px; }
+      width: 280px; }
     .row-new .col-content, .row-new .col-sidebar {
       display: table-cell;
       vertical-align: top; }
@@ -1264,7 +1264,7 @@ a {
       padding: 0 30px 0 0; } }
 @media (min-width: 1200px) {
   .row-new .col-content {
-    padding: 0 30px; } }
+    padding: 0 30px 0 0; } }
 
 .col-ad {
   text-align: center; }
@@ -1299,7 +1299,9 @@ a {
     .col-ad {
       display: table-cell;
       width: 200px;
-      position: relative; }
+      position: fixed;
+      left: 0;
+      bottom: 0; }
       .col-ad .ad-wrp {
         position: fixed;
         bottom: 0;
@@ -1320,7 +1322,8 @@ a {
   margin-top: 88px; }
   .main-content .container {
     position: relative;
-    padding-top: 28px; }
+    padding-top: 28px;
+    padding-bottom: 48px; }
 
 .home .main-content {
   margin-top: 16px; }

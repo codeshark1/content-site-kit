@@ -153,14 +153,17 @@ jQuery(document).ready(function($){
     });
 
 
-    $(document).on('scroll', function() {
+    $(document).on('scroll resize', function() {
         var distanceFromBottom = Math.floor($(document).height() - $(document).scrollTop() - $(window).height());
-        console.log(distanceFromBottom);
-        if(distanceFromBottom < $('#footer').outerHeight()) {
-            $('.col-ad').css('bottom', $('#footer').outerHeight() + 40)
-        } else {
-            $('.col-ad').css('bottom', 0 )
+        
+        if ( $(window).width() > 992) {
+            if(distanceFromBottom < $('#footer').outerHeight()) {
+                $('.col-ad').css('bottom', $('#footer').outerHeight() + 40)
+            } else {
+                $('.col-ad').css('bottom', 0 )
+            }
         }
+
     });   
 
 

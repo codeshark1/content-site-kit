@@ -126,10 +126,10 @@ a {
 	@media (min-width: $screen-md-min) {
 	    width: 200px;
 	    position: fixed;	    	    
-	    left: 0;bottom: 0;
+	    left: 0;
+	    bottom: 0;
+	    transition: all .3s;
 	    .ad-wrp {
-	    	position: fixed; 
-	    	bottom: 0; 
 	    	max-width: 100%;
 	    	width: inherit;
 	    	z-index: 1;
@@ -141,13 +141,6 @@ a {
 	}
 	@media (min-width: 1500px) {
 		width: 400px;
-	}
-}
-
-.col-ad-2 {
-	//background: #FFBFBF;
-	@media (max-width: 1400px) {
-		display: none !important;
 	}
 }
 

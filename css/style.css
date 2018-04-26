@@ -1300,10 +1300,10 @@ a {
       width: 200px;
       position: fixed;
       left: 0;
-      bottom: 0; }
+      bottom: 0;
+      -webkit-transition: all .3s;
+      transition: all .3s; }
       .col-ad .ad-wrp {
-        position: fixed;
-        bottom: 0;
         max-width: 100%;
         width: inherit;
         z-index: 1; }
@@ -1315,10 +1315,6 @@ a {
   @media (min-width: 1500px) {
     .col-ad {
       width: 400px; } }
-
-@media (max-width: 1400px) {
-  .col-ad-2 {
-    display: none !important; } }
 
 .main-content {
   background: #fff;

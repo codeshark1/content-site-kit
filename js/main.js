@@ -139,6 +139,7 @@ jQuery(document).ready(function($){
             var spaceWidth = $('.container').offset();
             var bannerWidth = $('.col-ad').width();
             $('.col-content').css('padding-left', (bannerWidth - spaceWidth.left));
+            $('.tab-bar').css('left', bannerWidth - spaceWidth.left + 15);
         } else {
             $('.col-content').css('padding-left', 0);
         }
@@ -149,6 +150,23 @@ jQuery(document).ready(function($){
     $(window).resize(function(){
         setPadding();
     });
+
+
+    $(document).on('scroll', function() {
+        var distanceFromBottom = Math.floor($(document).height() - $(document).scrollTop() - $(window).height());
+        console.log(distanceFromBottom);
+        if(distanceFromBottom < $('#footer').outerHeight()) {
+            $('.col-ad').css('bottom', $('#footer').outerHeight() + 40)
+        } else {
+            $('.col-ad').css('bottom', 0 )
+        }
+    });   
+
+
+
+
+
+
 
 
 

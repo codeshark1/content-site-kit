@@ -133,13 +133,9 @@ jQuery(document).ready(function($){
     });
 
 
-/*
- 1. get current space width 
- 2. get current banner width
- 3. set padding of content: (= banner - space)
-*/
+    /*BANNER*/
     function setPadding() {
-        if ( $(window).width() > 1200) {
+        if ( $(window).width() > 992) {
             var spaceWidth = $('.container').offset();
             var bannerWidth = $('.col-ad').width();
             $('.col-content').css('padding-left', (bannerWidth - spaceWidth.left));

@@ -134,38 +134,43 @@ jQuery(document).ready(function($){
 
 
     /*BANNER*/
+    /*Padding*/
     function setPadding() {
         if ( $(window).width() > 992) {
             var spaceWidth = $('.container').offset();
-            var bannerWidth = $('.col-ad').width();
+            var bannerWidth = $('#bnr').width();
             $('.col-content').css('padding-left', (bannerWidth - spaceWidth.left));
             $('.tab-bar').css('left', bannerWidth - spaceWidth.left + 15);
         } else {
             $('.col-content').css('padding-left', 0);
             $('.tab-bar').css('left', 15);
         }
-    }
-    
+    }    
     setPadding();
 
     $(window).resize(function(){
         setPadding();
     });
 
-
+    /*Bottom positioning*/
     $(document).on('scroll resize', function() {
         var distanceFromBottom = Math.floor($(document).height() - $(document).scrollTop() - $(window).height());
         
         if ( $(window).width() > 992) {
             if(distanceFromBottom < $('#footer').outerHeight()) {
-                $('.col-ad').css('bottom', $('#footer').outerHeight() + 40)
+                $('#bnr').css('bottom', $('#footer').outerHeight() + 40)
             } else {
-                $('.col-ad').css('bottom', 0 )
+                $('#bnr').css('bottom', 0 )
             }
         }
 
     });   
 
+    /*Close button*/
+    $('#bnr-close').click(function(){
+        $('#bnr').fadeOut();
+    });
+    /*--BANNER*/
 
 
 

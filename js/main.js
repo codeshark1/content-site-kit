@@ -137,6 +137,7 @@ jQuery(document).ready(function($){
     /*Padding*/
     function setPadding() {
         if ( $(window).width() > 992) {
+            $('#bnr').show();
             var spaceWidth = $('.container').offset();
             var bannerWidth = $('#bnr').width();
             $('.col-content').css('padding-left', (bannerWidth - spaceWidth.left));

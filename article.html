@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html class="no-js" lang="ru">
+<html lang="ru">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Статья - Идеи бизнеса</title>
-    <link rel="stylesheet" href="css/material-components-web.min.css">
     <link rel="stylesheet" href="css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="css/style.css">
     <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>    
@@ -19,7 +18,7 @@
 <!--[if lt IE 10]>
     <p class="browserupgrade">Вы используете <b>устаревший</b> браузер. Пожалуйста, <a href="http://browsehappy.com/?locale=ru_ru">обновите свой браузер</a> чтобы улучшить опыт работы с сайтом.</p>
 <![endif]-->
-<header class="header-site">
+<header class="header-site" id="header">
     <div class="container">
         <ul role="menu" class="nav-menu nav-menu-inline nav-menu-header-1 d-none d-md-block">
             <li role="menuitem" class="menu-item"><a href="#">Главная</a></li>
@@ -83,12 +82,6 @@
             </ul>
         </div>
         <div class="row-new">
-            <div class="col-ad" id="bnr">
-                <div class="ad-wrp">
-                    <img src="images/bnr.png" alt="bnr">
-                    <button type="button" class="close" id="bnr-close"></button>
-                </div><!-- /.ad-wrp -->
-            </div><!-- /.col-ad -->
             <div class="col-content">
                 <nav class="breadcrumbs">
                     <a href="#">Главная</a>
@@ -287,29 +280,29 @@
                             <textarea id="comment" name="comment" rows="7" aria-required="true" placeholder="Текст комментария"></textarea>
                             
                             <label class="checkbox"><input type="checkbox" class="checkbox">Я хочу получать обновления на почту</label>                            
-                            <input name="submit" type="submit" id="submit" class="submit mdc-button mdc-button--raised" value="Отправить комментарий">                            
+                            <input name="submit" type="submit" id="submit" class="submit btn btn--action" value="Отправить комментарий">                            
                         </form>
                     </section><!-- #respond -->
                 </article><!-- article-main --> <!-- col-md-8 col-lg-9 -->
-            </div><!-- /.col -->
+            </div><!-- /.col-content -->
             <aside class="col-sidebar sidebar-site">
                 <section class="widget widget-menu">
                     <h4 class="header">Категории</h4>
                     <ul role="menu" class="nav-menu menu-categs">
-                        <li role="menuitem" class="menu-item menu-item--has-children"><a href="#">Авто</a></li>
-                        <li role="menuitem" class="menu-item menu-item--has-children"><a href="#">красота И Здоровье</a></li>
-                        <li role="menuitem" class="menu-item menu-item--has-children"><a href="#">гостиничный Бизнес</a></li>
-                        <li role="menuitem" class="menu-item menu-item--has-children"><a href="#">детские Франшизы</a></li>
-                        <li role="menuitem" class="menu-item menu-item--has-children"><a href="#">торговля</a></li>
-                        <li role="menuitem" class="menu-item menu-item--has-children"><a href="#">медицина</a></li>
-                        <li role="menuitem" class="menu-item menu-item--has-children"><a href="#">обучение</a></li>
-                        <li role="menuitem" class="menu-item menu-item--has-children"><a href="#">производство</a></li>
-                        <li role="menuitem" class="menu-item menu-item--has-children"><a href="#">спорт</a></li>
+                        <li role="menuitem" class="menu-item"><a href="#">Авто</a></li>
+                        <li role="menuitem" class="menu-item"><a href="#">красота И Здоровье</a></li>
+                        <li role="menuitem" class="menu-item"><a href="#">гостиничный Бизнес</a></li>
+                        <li role="menuitem" class="menu-item"><a href="#">детские Франшизы</a></li>
+                        <li role="menuitem" class="menu-item"><a href="#">торговля</a></li>
+                        <li role="menuitem" class="menu-item"><a href="#">медицина</a></li>
+                        <li role="menuitem" class="menu-item"><a href="#">обучение</a></li>
+                        <li role="menuitem" class="menu-item"><a href="#">производство</a></li>
+                        <li role="menuitem" class="menu-item"><a href="#">спорт</a></li>
                         <li role="menuitem" class="menu-item menu-item--has-children">
                             <a href="#">Питание</a>
                             <ul role="menu" class="nav-menu sub-menu">
-                                <li role="menuitem" class="menu-item menu-item--has-children"><a href="#">бары</a></li>
-                                <li role="menuitem" class="menu-item menu-item--has-children"><a href="#">бургеры </a></li>
+                                <li role="menuitem" class="menu-item"><a href="#">бары</a></li>
+                                <li role="menuitem" class="menu-item"><a href="#">бургеры </a></li>
                                 <li role="menuitem" class="menu-item menu-item--has-children">
                                     <a href="#">быстрое питание</a>
                                     <ul role="menu" class="nav-menu sub-menu">
@@ -326,33 +319,39 @@
                                         <li role="menuitem" class="menu-item"><a href="#">остальное</a></li>
                                     </ul>
                                 </li>
-                                <li role="menuitem" class="menu-item menu-item--has-children"><a href="#">кофейни</a></li>
-                                <li role="menuitem" class="menu-item menu-item--has-children"><a href="#">мороженое и йогурты</a></li>
-                                <li role="menuitem" class="menu-item menu-item--has-children"><a href="#">пиво</a></li>
-                                <li role="menuitem" class="menu-item menu-item--has-children"><a href="#">пицца</a></li>
-                                <li role="menuitem" class="menu-item menu-item--has-children"><a href="#">рестораны</a></li>
-                                <li role="menuitem" class="menu-item menu-item--has-children"><a href="#">столовые</a></li>
-                                <li role="menuitem" class="menu-item menu-item--has-children"><a href="#">суши ролы</a></li>
-                                <li role="menuitem" class="menu-item menu-item--has-children"><a href="#">кафе</a></li>
-                                <li role="menuitem" class="menu-item menu-item--has-children"><a href="#">антикафе</a></li>
-                                <li role="menuitem" class="menu-item menu-item--has-children"><a href="#">кофе с собой</a></li>
-                                <li role="menuitem" class="menu-item menu-item--has-children"><a href="#">банкетный зал</a></li>
-                                <li role="menuitem" class="menu-item menu-item--has-children"><a href="#">детские / семейные кафе</a></li>
-                                <li role="menuitem" class="menu-item menu-item--has-children"><a href="#">здоровое питание</a></li>
-                                <li role="menuitem" class="menu-item menu-item--has-children"><a href="#">кальянные</a></li>
-                                <li role="menuitem" class="menu-item menu-item--has-children"><a href="#">пекарни / кондитерские</a></li>
-                                <li role="menuitem" class="menu-item menu-item--has-children"><a href="#">стрит фуд / фудкорты</a></li>
-                                <li role="menuitem" class="menu-item menu-item--has-children"><a href="#">столовые</a></li>
-                                <li role="menuitem" class="menu-item menu-item--has-children"><a href="#">пабы</a></li>
-                                <li role="menuitem" class="menu-item menu-item--has-children"><a href="#">доставка еды</a></li>
-                                <li role="menuitem" class="menu-item menu-item--has-children"><a href="#">продуктовые магазины</a></li>
-                                <li role="menuitem" class="menu-item menu-item--has-children"><a href="#">шаурма</a></li>
-                                <li role="menuitem" class="menu-item menu-item--has-children"><a href="#">блины</a></li>
+                                <li role="menuitem" class="menu-item"><a href="#">кофейни</a></li>
+                                <li role="menuitem" class="menu-item"><a href="#">мороженое и йогурты</a></li>
+                                <li role="menuitem" class="menu-item"><a href="#">пиво</a></li>
+                                <li role="menuitem" class="menu-item"><a href="#">пицца</a></li>
+                                <li role="menuitem" class="menu-item"><a href="#">рестораны</a></li>
+                                <li role="menuitem" class="menu-item"><a href="#">столовые</a></li>
+                                <li role="menuitem" class="menu-item"><a href="#">суши ролы</a></li>
+                                <li role="menuitem" class="menu-item"><a href="#">кафе</a></li>
+                                <li role="menuitem" class="menu-item"><a href="#">антикафе</a></li>
+                                <li role="menuitem" class="menu-item"><a href="#">кофе с собой</a></li>
+                                <li role="menuitem" class="menu-item"><a href="#">банкетный зал</a></li>
+                                <li role="menuitem" class="menu-item"><a href="#">детские / семейные кафе</a></li>
+                                <li role="menuitem" class="menu-item"><a href="#">здоровое питание</a></li>
+                                <li role="menuitem" class="menu-item"><a href="#">кальянные</a></li>
+                                <li role="menuitem" class="menu-item"><a href="#">пекарни / кондитерские</a></li>
+                                <li role="menuitem" class="menu-item"><a href="#">стрит фуд / фудкорты</a></li>
+                                <li role="menuitem" class="menu-item"><a href="#">столовые</a></li>
+                                <li role="menuitem" class="menu-item"><a href="#">пабы</a></li>
+                                <li role="menuitem" class="menu-item"><a href="#">доставка еды</a></li>
+                                <li role="menuitem" class="menu-item"><a href="#">продуктовые магазины</a></li>
+                                <li role="menuitem" class="menu-item"><a href="#">шаурма</a></li>
+                                <li role="menuitem" class="menu-item"><a href="#">блины</a></li>
                             </ul>
                         </li>
                     </ul>
-                </section> <!-- col-md-4 col-lg-3 -->
+                </section>
             </aside><!-- /.col -->
+            <div class="col-ad" id="bnr">
+                <div class="ad-wrp">
+                    <img src="images/bnr.png" alt="bnr">
+                    <button type="button" class="close" id="bnr-close"></button>
+                </div><!-- /.ad-wrp -->
+            </div><!-- /.col-ad -->
         </div><!-- /.row -->    
     </div><!-- /.container -->
 </main>

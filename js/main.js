@@ -136,15 +136,13 @@ jQuery(document).ready(function($){
     /*BANNER*/
     /*Padding*/
     function setPadding() {
-        if ( $(window).width() > 992) {
+        if ( ($(window).width() > 992) && ($('#bnr').length) ) {
             $('#bnr').show();
             var spaceWidth = $('.container').offset();
             var bannerWidth = $('#bnr').width();
-            $('.col-content').css('padding-left', (bannerWidth - spaceWidth.left));
-            $('.tab-bar').css('left', bannerWidth - spaceWidth.left + 15);
+            $('.main-content .container').css('padding-left', (bannerWidth - spaceWidth.left + 15));
         } else {
-            $('.col-content').css('padding-left', 0);
-            $('.tab-bar').css('left', 15);
+            $('.main-content .container').css('padding-left', 15);
         }
     }    
     setPadding();
@@ -173,60 +171,4 @@ jQuery(document).ready(function($){
     });
     /*--BANNER*/
 
-
-
-
-
-
-
-
-
-
-    /*RANGE SLIDER*/
-    var slider_1 = document.getElementById('slider-range-1');
-    var slider_2 = document.getElementById('slider-range-2');
-    var valuesDivs_1 = [
-        document.getElementById('price-min'),
-        document.getElementById('price-max')
-    ];
-    var valuesDivs_2 = [
-        document.getElementById('invest-min'),
-        document.getElementById('invest-max')
-    ];
-
-    noUiSlider.create(slider_1, {
-        start: [10000, 500000],
-        connect: true,
-        step: 1000,
-        range: {
-            'min': 1000,
-            'max': 1000000
-        },
-        format: wNumb({
-            decimals: 0,
-            thousand: ','
-        })
-    });
-
-    noUiSlider.create(slider_2, {
-        start: [10000, 500000],
-        connect: true,
-        step: 1000,
-        range: {
-            'min': 1000,
-            'max': 1000000
-        },
-        format: wNumb({
-            decimals: 0,
-            thousand: ','
-        })
-    });
-
-    slider_1.noUiSlider.on('update', function( values, handle ) {
-        valuesDivs_1[handle].value = values[handle];
-    });
-
-    slider_2.noUiSlider.on('update', function( values, handle ) {
-        valuesDivs_2[handle].value = values[handle];
-    });
 });

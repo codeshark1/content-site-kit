@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html class="no-js" lang="ru">
+<html lang="ru">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Идеи бизнеса</title>
-    <link rel="stylesheet" href="css/material-components-web.min.css">
     <link rel="stylesheet" href="css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="css/style.css">
     <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>    
@@ -19,7 +18,7 @@
 <!--[if lt IE 10]>
     <p class="browserupgrade">Вы используете <b>устаревший</b> браузер. Пожалуйста, <a href="http://browsehappy.com/?locale=ru_ru">обновите свой браузер</a> чтобы улучшить опыт работы с сайтом.</p>
 <![endif]-->
-<header class="header-site">
+<header class="header-site" id="header">
     <div class="container">
         <ul role="menu" class="nav-menu nav-menu-inline nav-menu-header-1 d-none d-md-block">
             <li role="menuitem" class="menu-item"><a href="#">Главная</a></li>
@@ -77,7 +76,7 @@
         <section class="section-major">
             <h1 class="h-index">Начните строить свой бизнес сегодня!</h1>
             <div class="row">
-                <div class="col-categ col-lg-2 col-md-4 col-6">
+                <div class="b-categ col-categ">
                     <div class="icon"><i class="fas fa-image"></i></div>
                     <h3 class="title"><a href="#">питание</a></h3>
                     <ul class="links">
@@ -90,7 +89,7 @@
                     </ul>
                     <p class="all"><a href="#">все материалы</a></p>
                 </div><!-- /.col-categ col -->
-                <div class="col-categ col-lg-2 col-md-4 col-6">
+                <div class="b-categ col-categ">
                     <div class="icon"><i class="fas fa-image"></i></div>
                     <h3 class="title"><a href="#">авто</a></h3>
                     <ul class="links">
@@ -105,7 +104,7 @@
                     </ul>
                     <p class="all"><a href="#">все материалы</a></p>
                 </div><!-- /.col-categ col -->
-                <div class="col-categ col-lg-2 col-md-4 col-6">
+                <div class="b-categ col-categ">
                     <div class="icon"><i class="fas fa-image"></i></div>
                     <h3 class="title"><a href="#">красота и здоровье</a></h3>
                     <ul class="links">                    
@@ -123,7 +122,7 @@
                     </ul>
                     <p class="all"><a href="#">все материалы</a></p>
                 </div><!-- /.col-categ col -->
-                <div class="col-categ col-lg-2 col-md-4 col-6">
+                <div class="b-categ col-categ">
                     <div class="icon"><i class="fas fa-image"></i></div>
                     <h3 class="title"><a href="#">гостиничный бизнес</a></h3>
                     <ul class="links">
@@ -136,7 +135,7 @@
                     </ul>
                     <p class="all"><a href="#">все материалы</a></p>
                 </div><!-- /.col-categ col -->
-                <div class="col-categ col-lg-2 col-md-4 col-6">
+                <div class="b-categ col-categ">
                     <div class="icon"><i class="fas fa-image"></i></div>
                     <h3 class="title"><a href="#">торговля</a></h3>
                     <ul class="links">
@@ -149,7 +148,7 @@
                     </ul>
                     <p class="all"><a href="#">все материалы</a></p>
                 </div><!-- /.col-categ col -->
-                <div class="col-categ col-lg-2 col-md-4 col-6">
+                <div class="b-categ col-categ">
                     <div class="icon"><i class="fas fa-image"></i></div>
                     <h3 class="title"><a href="#">строительство</a></h3>
                     <ul class="links">
@@ -163,7 +162,7 @@
                 </div><!-- /.col-categ col -->
             </div><!-- /.row -->
             <div class="b-show-more">
-                <a href="#" class="mdc-button mdc-button--stroked">смотреть все направления</a>
+                <a href="#" class="btn btn--stroked">смотреть все направления</a>
             </div><!-- b-show-more -->
         </section><!-- /.section-major -->
         
@@ -284,7 +283,7 @@
                 </article><!-- /.card-polar -->
             </div><!-- /#carousel -->
             <div class="b-show-more">
-                <a href="#" class="mdc-button mdc-button--stroked">больше идей</a>
+                <a href="#" class="btn btn--stroked">больше идей</a>
             </div><!-- b-show-more -->
         </section><!-- /.section-major -->
 
@@ -345,7 +344,7 @@
                 </article><!-- /.card-cols col-->
             </div><!-- /.row-->
             <div class="b-show-more">
-                <a href="#" class="mdc-button mdc-button--stroked">смотреть все посты</a>
+                <a href="#" class="btn btn--stroked">смотреть все посты</a>
             </div><!-- b-show-more -->
         </section><!-- /.section-major -->
 
@@ -507,10 +506,17 @@
         <article class="card-about">
             <p>На нашем сайте представлены бесплатно реальные, самые лучшие, прибыльные, свежие и новые бизнес-идеи 2016-2017 года для открытия своего малого, среднего и большого, к примеру, собственного семейного бизнеса, которые реально работают и выгодные для маленького города и небольшого населенного пункта. Тут актуальные новинки и только прибыльные идеи для начинающих и частного бизнеса. Сборник был создан в помощь малому предпринимательству в России, Украине, Беларуси, Казахстане. Вы не знаете, как открыть своё дело? Этот портал бесплатно поможем вам!</p>
         </article><!-- /.about -->
+
+        <div class="col-ad" id="bnr">
+            <div class="ad-wrp">
+                <img src="images/bnr.png" alt="bnr">
+                <button type="button" class="close" id="bnr-close"></button>
+            </div><!-- /.ad-wrp -->
+        </div><!-- /.col-ad -->
     </div><!-- /.container -->
 </main><!-- /.main-content -->
 
-<footer class="footer-site">
+<footer class="footer-site" id="footer">
     <div class="container">
         <div class="row">
             <div class="col-md-6">

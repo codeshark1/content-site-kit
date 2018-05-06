@@ -2,14 +2,13 @@
 @import '_variables';
 @import '_base+common';
 @import '_plugins';
-
-
+@import '_other';
 
 
 html {
 }
 body {	
-	background: #EAEAEA;
+	background: #EAEAEA; 
 }
 
 a {
@@ -105,13 +104,11 @@ a {
 		z-index: 5;
 		background: #DBCEFD;
 		.ad-wrp {
-			//display: inline-block;
 			position: relative;		
 			height: 100%;
 		}
 		img {
 			height: 100%;
-			//width: 200px;
 		}
 		.close {
 			position: absolute; 
@@ -145,10 +142,11 @@ a {
 	@media (min-width: 1500px) {
 		width: 400px;
 	}
+	img {vertical-align: bottom;}
 }
 
 
-.main-content {	
+.main-content {
 	background: #fff;
 	@include shadow();		
 	margin-top: 88px;
@@ -199,11 +197,6 @@ a {
 		padding: 14px 14px 0;
 		@include clearfix();		
 	}
-	.lbl--radio {
-		margin: 0 1rem 1rem 0;
-		display: inline-block;
-		input {margin-right: 8px; vertical-align: text-top;}
-	}
 
 	/* left col */
 	.b-col-1 {
@@ -211,8 +204,8 @@ a {
 			float: left; width: 65%;
 			&_i {@include clearfix();}
 		}
-		@media (min-width: $screen-lg-min) {
-			width: 68%;
+		@media (min-width: 1800px) {
+			width: 67%;
 			&-1 {
 				width: 47%;
 				float: left;
@@ -232,8 +225,8 @@ a {
 		@media (min-width: $screen-md-min) {
 			float: right; width: 32%;
 		}
-		@media (min-width: $screen-lg-min) {
-			float: right; width: 30%;
+		@media (min-width: 1800px) {
+			width: 32%;
 			.b-col-2-1 {position: relative; padding-left: 130px;}
 			.lbl--side {
 				width: 125px;
@@ -256,7 +249,7 @@ a {
 	.input-price {width: 80px; margin: 0 2px}
 }
 .b-slider-range {
-	margin-top: 1.5rem;
+	margin-top: 16px;
 	padding: 0 16px;
 }
 /* ==========================================================================

@@ -1,7 +1,7 @@
 jQuery(document).ready(function($){
 
     function navigation_show(button, menu) {
-        $(menu).hide();
+        //$(menu).hide();
         $(button).click(function(){
             if ( $(menu).is(':visible')){
                 $(menu).slideUp();
@@ -13,7 +13,7 @@ jQuery(document).ready(function($){
         });
     }
 
-    navigation_show('#nav-toggle','.nav-menu-mob-wrapper');
+    navigation_show('#nav-toggle','.nav-menu-mob-wrapper');    
 
     function menu_nested(menu_id) {
         $(menu_id).find('ul').hide();
@@ -133,7 +133,9 @@ jQuery(document).ready(function($){
     });
 
 
-    /*BANNER*/
+    /*
+    * BANNER
+    */
     /*Padding*/
     function setPadding() {
         if ( ($(window).width() > 992) && ($('#bnr').length) ) {
@@ -173,18 +175,34 @@ jQuery(document).ready(function($){
 
 
     /* SEARCH FORM */
-    $('.search-submit, .search-field').click(function(e){
-        e.stopPropagation();
-    });
-    $('#searchform').find('.search-submit').click(function(e){
-        if ( $(this).parent('#searchform').hasClass('open') ) {
-            //do nothing
-        } else {
-            e.preventDefault();
-            $(this).parent('#searchform').addClass('open');
+    function searchForm(formId) {
+        $('.search-submit, .search-field').click(function(e){
+            e.stopPropagation();
+        });
+        $(formId).find('.search-submit').click(function(e){
+            if ( $(this).parent(formId).hasClass('open') ) {
+                //do nothing
+            } else {
+                e.preventDefault();
+                $(this).parent(formId).addClass('open');
+            }
+        });
+        $('html').click(function(){
+            $(formId).removeClass('open');
+        });
+    }
+    searchForm('#searchform');
+
+    /* CATEGS (MOB BEHAVIOR) */
+    $('#header-categs').click(function(){
+        if ( $(window).width() <= 991) {
+            if ( $('#menu-categs').is(':visible')){
+                $('#menu-categs').slideUp();
+                $(this).removeClass('active');
+            } else {
+                $(this).addClass('active');
+                $('#menu-categs').slideDown();
+            }
         }
-    });
-    $('html').click(function(){
-        $('#searchform').removeClass('open');
     });
 });

@@ -73,13 +73,13 @@ a {
    ========================================================================== */
 .row-new {
 	display: flex;
-	@media (max-width: $screen-xs-max) {
+	@media (max-width: $screen-sm-max) {
 		flex-wrap: wrap;
 		flex-direction: column;
 		.col-sidebar {order: 1}
 		.col-content {order: 2}
 	}
-	@media (min-width: $screen-sm-min) {
+	@media (min-width: $screen-md-min) {
 		.col-sidebar {
 		    flex-grow: 0;
 			flex-shrink: 0;

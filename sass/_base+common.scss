@@ -37,18 +37,26 @@ input[type="text"],
 input[type="email"], 
 input[type="password"], 
 input[type="url"], 
+input[type="tel"], 
+input[type="number"], 
 select,
 textarea {
   width: 100%;
   border: 1px solid rgba(#000, .07);
-  padding: 8px 8px;
+  padding: 8px;
   margin: 0;
   font-family: Roboto, sans-serif;
   font-size: 14px;
   transition: all .3s ease-in-out;
 }
+textarea {
+  resize: vertical;
+  margin-bottom: 8px; 
+  height: 100px;  
+}
 select {padding: 6px 4px 6px 4px;}
 textarea {margin-bottom: 8px;}
+input[type="number"] {padding-right: 0;}
 input.checkbox {margin-right: 8px;}
 label.checkbox {margin-bottom: 8px; display: block;}
 input[type="radio"],
@@ -107,6 +115,7 @@ fieldset {
     border: 1px solid $gray;
   }
 }
+
 .form-search-mob, .form-search-header {
   position: relative;
   .search-submit {
@@ -115,21 +124,20 @@ fieldset {
     border: none;
     padding: 0;
     position: absolute;
-    background-color: transparent;
+    cursor: pointer;
+    right: 10px;
+    top: 10px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='16px' height='16px'%3E%3Cpath fill-rule='evenodd' fill='rgb%51, 51, 51' d='M14.490,12.752 L11.296,9.559 C11.279,9.542 11.259,9.530 11.242,9.515 C11.870,8.561 12.237,7.421 12.237,6.194 C12.237,2.856 9.531,0.150 6.193,0.150 C2.856,0.150 0.150,2.856 0.150,6.193 C0.150,9.531 2.856,12.237 6.193,12.237 C7.420,12.237 8.561,11.870 9.514,11.242 C9.530,11.259 9.542,11.279 9.559,11.296 L12.753,14.490 C13.232,14.969 14.010,14.969 14.490,14.490 C14.969,14.010 14.969,13.232 14.490,12.752 ZM6.193,10.142 C4.013,10.142 2.245,8.374 2.245,6.193 C2.245,4.013 4.013,2.245 6.193,2.245 C8.374,2.245 10.142,4.013 10.142,6.193 C10.142,8.374 8.374,10.142 6.193,10.142 Z'/%3E%3C/svg%3E") no-repeat;
   }
 }
-.form-search-header {  
+.form-search-header {
   display: inline-block;
   border: 1px solid #e3e3e3;
   border-radius: 30px;
-  .search-field {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='16px' height='16px'%3E%3Cpath fill-rule='evenodd' fill='rgb%51, 51, 51' d='M14.490,12.752 L11.296,9.559 C11.279,9.542 11.259,9.530 11.242,9.515 C11.870,8.561 12.237,7.421 12.237,6.194 C12.237,2.856 9.531,0.150 6.193,0.150 C2.856,0.150 0.150,2.856 0.150,6.193 C0.150,9.531 2.856,12.237 6.193,12.237 C7.420,12.237 8.561,11.870 9.514,11.242 C9.530,11.259 9.542,11.279 9.559,11.296 L12.753,14.490 C13.232,14.969 14.010,14.969 14.490,14.490 C14.969,14.010 14.969,13.232 14.490,12.752 ZM6.193,10.142 C4.013,10.142 2.245,8.374 2.245,6.193 C2.245,4.013 4.013,2.245 6.193,2.245 C8.374,2.245 10.142,4.013 10.142,6.193 C10.142,8.374 8.374,10.142 6.193,10.142 Z'/%3E%3C/svg%3E");
-    background-repeat:no-repeat;    
-  }
 
   .search-field {
     margin: 0;
-    border-radius: 0;
+    border-radius: 20px;
     background-color: transparent;
     padding: 8px 25px 8px 12px;
     width: 35px;
@@ -137,25 +145,18 @@ fieldset {
     transition: all .15s;
     cursor: pointer;
     border:none;
-    background-position: 11px 12px;
-  }
-
-  .search-submit {
-    width: 15px;
-    height: 15px;
-    border: none;padding: 0;
-    position: absolute;
-    display: none;
-    background-color: transparent;
-    z-index: -1;
   }
   .search-field:focus {
-    width: 200px;
-    cursor: auto;
-    padding-right: 30px;
-    background-position: 173px 12px;
-    &+.search-submit {display: block}
-    //@media (min-width: $screen-md-min) {width: 200px;}
+    //width: 200px;
+    //cursor: auto;
+    //padding-right: 30px;
+  }
+  &.open {
+    .search-field {
+      width: 200px;
+      cursor: auto;
+      padding-right: 30px;
+    }    
   }
 }
 
@@ -349,6 +350,7 @@ fieldset {
     margin: 0;
     background: rgba(#000, .07);
     padding: 18px 24px;
+    font-size: 1.4rem;
   }
 }
 .menu-categs {
@@ -822,7 +824,7 @@ h1, h2, h3, h4 {line-height: 1.1; font-weight: 500}
    ========================================================================== */
 .sidebar-site {
   @media (max-width: $screen-xs-max) {
-    margin-top: 28px;
+    margin-bottom: 24px;
   }
 }
 /* ==========================================================================

@@ -135,22 +135,35 @@ fieldset {
   border: 1px solid #e3e3e3;
   border-radius: 30px;
 
+  .search-field, .search-submit {
+    &:focus {outline-width: 0;}
+  }
   .search-field {
     margin: 0;
     border-radius: 20px;
     background-color: transparent;
-    padding: 8px 25px 8px 12px;
+    padding: 8px 12px;
     width: 35px;
     height: 35px;
     transition: all .15s;
     cursor: pointer;
     border:none;
+    color: transparent;
+    &::-moz-placeholder {opacity:  0;}
+    &::-webkit-input-placeholder {opacity:  0;}
+    &::-ms-input-placeholder {opacity:  0;}
+    &::input-placeholder {opacity:  0;}
   }
   &.open {
     .search-field {
       width: 200px;
       cursor: auto;
-      padding-right: 30px;
+      padding-right: 25px;
+      color: $base-text;
+      &::-moz-placeholder {opacity:  1;}
+      &::-webkit-input-placeholder {opacity:  1;}
+      &::-ms-input-placeholder {opacity:  1;}
+      &::input-placeholder {opacity:  1;}      
     }    
   }
 }

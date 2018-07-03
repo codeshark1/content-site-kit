@@ -146,15 +146,15 @@ fieldset {
 .form-search-mob, .form-search-header {
   position: relative; }
   .form-search-mob .search-submit, .form-search-header .search-submit {
-    width: 15px;
-    height: 15px;
+    position: absolute;
+    width: 28px;
+    height: 28px;
     border: none;
     padding: 0;
-    position: absolute;
+    right: 3px;
+    top: 4px;
     cursor: pointer;
-    right: 10px;
-    top: 10px;
-    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='16px' height='16px'%3E%3Cpath fill-rule='evenodd' fill='rgb%51, 51, 51' d='M14.490,12.752 L11.296,9.559 C11.279,9.542 11.259,9.530 11.242,9.515 C11.870,8.561 12.237,7.421 12.237,6.194 C12.237,2.856 9.531,0.150 6.193,0.150 C2.856,0.150 0.150,2.856 0.150,6.193 C0.150,9.531 2.856,12.237 6.193,12.237 C7.420,12.237 8.561,11.870 9.514,11.242 C9.530,11.259 9.542,11.279 9.559,11.296 L12.753,14.490 C13.232,14.969 14.010,14.969 14.490,14.490 C14.969,14.010 14.969,13.232 14.490,12.752 ZM6.193,10.142 C4.013,10.142 2.245,8.374 2.245,6.193 C2.245,4.013 4.013,2.245 6.193,2.245 C8.374,2.245 10.142,4.013 10.142,6.193 C10.142,8.374 8.374,10.142 6.193,10.142 Z'/%3E%3C/svg%3E") no-repeat; }
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='16px' height='16px'%3E%3Cpath d='M14.490,12.752 L11.296,9.559 C11.279,9.542 11.259,9.530 11.242,9.515 C11.870,8.561 12.237,7.421 12.237,6.194 C12.237,2.856 9.531,0.150 6.193,0.150 C2.856,0.150 0.150,2.856 0.150,6.193 C0.150,9.531 2.856,12.237 6.193,12.237 C7.420,12.237 8.561,11.870 9.514,11.242 C9.530,11.259 9.542,11.279 9.559,11.296 L12.753,14.490 C13.232,14.969 14.010,14.969 14.490,14.490 C14.969,14.010 14.969,13.232 14.490,12.752 ZM6.193,10.142 C4.013,10.142 2.245,8.374 2.245,6.193 C2.245,4.013 4.013,2.245 6.193,2.245 C8.374,2.245 10.142,4.013 10.142,6.193 C10.142,8.374 8.374,10.142 6.193,10.142 Z'/%3E%3C/svg%3E") no-repeat 7px 6px; }
 
 .form-search-header {
   display: inline-block;
@@ -1523,6 +1523,9 @@ a {
 
 .col-ad {
   text-align: center; }
+  @media (max-width: 767px) {
+    .col-ad .close {
+      right: 16px; } }
   @media (max-width: 992px) {
     .col-ad {
       position: fixed;

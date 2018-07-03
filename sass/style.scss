@@ -94,6 +94,9 @@ a {
 }
 .col-ad {
 	text-align: center;	
+	@media (max-width: $screen-xs-max) {
+		.close {right: 16px;}
+	}
 	@media (max-width: $screen-md) {
 		position: fixed;
 		left: 0;

@@ -433,8 +433,9 @@ fieldset {
 }
 
 .nav-menu-mob-wrapper {  
+  display: none;
   @media (min-width: $screen-sm-min) {
-    display: none;
+    display: none !important;
   }
 }
 

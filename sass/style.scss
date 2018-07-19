@@ -28,15 +28,25 @@ a {
 	  	.google-links {
 	      position: absolute;
 	      top: -6px;
-	      left: 270px;
+	      left: 18%;
 	    }
-  	}
+	}
+	.row-new {
+		@media (min-width: $screen-md-min) {
+			border-bottom: 1px solid #e3e3e3;
+		}
+	}
 }
+.col-logo {flex-shrink: 0}
 .logo-main {
 	display: block;
 	font-weight: 500;
 	text-transform: uppercase;
-	font-size: 22px;
+	font-size: 22px;	
+	margin: 19px 0;
+	@media (min-width: $screen-sm-min) {
+		margin: 13px 0;
+	}
 	svg {
 		color: #FBD70D;
 	}
@@ -46,15 +56,10 @@ a {
    NAVIGATION
    ========================================================================== */
 .nav-menu-header-1 {	
-	.menu-item:last-child {margin-right: 0;}	
-	@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
-		.menu-item:first-child {display: none;}
-	}
+	.menu-item:last-child {margin-right: 0;}
+
 	@media (min-width: $screen-md-min) {
-		text-align: right;
-		border-bottom: 1px solid #e3e3e3;
-		@iclude clearfix();
-		.menu-item:first-child {float: left;}
+		text-align: right;	
 	}
 }
 
@@ -65,7 +70,6 @@ a {
 }
 .nav-menu-header-2 { 	
 	display: inline-block;
-	margin-top: 5px;
 	a {font-weight: 500;}
 }
 /* ==========================================================================
@@ -73,6 +77,7 @@ a {
    ========================================================================== */
 .row-new {
 	display: flex;
+	justify-content: space-between;
 	@media (max-width: $screen-sm-max) {
 		flex-wrap: wrap;
 		flex-direction: column;
@@ -80,13 +85,16 @@ a {
 		.col-content {order: 2}
 	}
 	@media (min-width: $screen-md-min) {
+		.col-content {
+			padding: 0 16px 0 0;
+			flex-grow: 1;
+		}
 		.col-sidebar {
 		    flex-grow: 0;
 			flex-shrink: 0;
 			width: 280px;
 			justify-content: flex-start;
 		}
-		.col-content {padding: 0 16px 0 0;}
 	}
 	@media (min-width: $screen-lg-min) {
 		.col-content {padding: 0 32px 0 0;}	

@@ -185,6 +185,7 @@ jQuery(document).ready(function($){
             } else {
                 e.preventDefault();
                 $(this).parent(formId).addClass('open');
+                $(this).siblings('.search-field').focus();
             }
         });
         $('html').click(function(){
